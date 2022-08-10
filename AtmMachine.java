@@ -71,15 +71,18 @@ public class AtmMachine {
                                     if(balanceWithdraw <= 4000 && balanceWithdraw > 0 ){
                                         if(balance[userId]< balanceWithdraw){
                                             System.out.println("Insuficient Amount");
+                                            subMenu = false;
                                             break;
                                         }
                                         else{
                                             balance[userId] -= balanceWithdraw;
+                                            subMenu = false;
                                             break;
                                         }
                                     }
                                     else{
                                         System.out.println("This amount cross the withdraw limit");
+                                        subMenu = false;
                                         break;
                                     }
                                 
